@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas González Saito</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #fdfdfd;
+        }
+        header, section {
+            margin-bottom: 40px;
+        }
+        h1, h2 {
+            color: #111;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            text-align: left;
+        }
+        h2 {
+            font-size: 1.8em;
+        }
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            display: flex;
+
+            align-items: flex-start;
+            gap: 30px;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #eee;
+        }
+        .about-text {
+            flex: 1;
+        }
+        .nav {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            display: flex;
+            gap: 20px;
+            font-size: 1.1em;
+        }
+        .nav li a {
+            font-weight: 500;
+        }
+        .news-list, .publications-list, .projects-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .news-list li, .publications-list li, .projects-list li {
+            margin-bottom: 20px;
+        }
+        .news-date {
+            font-weight: 500;
+            color: #555;
+            display: inline-block;
+            width: 120px;
+        }
+        .publication-title {
+            font-weight: bold;
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        .publication-authors {
+            font-style: italic;
+            color: #555;
+        }
+        .publication-authors b {
+            font-style: normal;
+            color: #111;
+        }
+        .publication-venue {
+            color: #333;
+        }
+        .job {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 3px solid #eee;
+        }
+        .job-title {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .job-company {
+            font-style: italic;
+            color: #555;
+        }
+        .job-date {
+            color: #777;
+            font-size: 0.9em;
+        }
+        .footer-links {
+            text-align: center;
+            margin-top: 50px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            font-size: 1.1em;
+        }
+        .footer-links a {
+            margin: 0 15px;
+        }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Thomas González Saito</h1>
+        <ul class="nav">
+            <li><a href="#" onclick="showSection('about'); return false;">About</a></li>
+            <li><a href="#" onclick="showSection('news'); return false;">News</a></li>
+            <li><a href="#" onclick="showSection('publications'); return false;">Publications</a></li>
+            <li><a href="#" onclick="showSection('experience'); return false;">Experience</a></li>
+            <li><a href="#" onclick="showSection('projects'); return false;">Projects</a></li>
+        </ul>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <!-- Make sure to add a 'profile.jpg' file in the same directory -->
+            <img src="profile.jpeg" alt="Thomas González Saito" class="profile-pic">
+            <div class="about-text">
+                <p>
+                    I am a CFIS student pursuing a double degree in Data Science and Biomedical Engineering at Universitat Politècnica de Catalunya (UPC). My interests lie in developing new Machine Learning methods for biology and healthcare, combining technical and biomedical expertise to drive impactful research.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="hidden">
+        <h2>News</h2>
+        <ul class="news-list">
+            <li>
+                <span class="news-date">Feb 2026</span> I will be joining the Uhler Lab at MIT as an in-person visiting student.
+            </li>
+            <li>
+                <span class="news-date">Nov 2025</span> Our paper on survival analysis for COPD patients was uploaded to arXiv.
+            </li>
+            <li>
+                <span class="news-date">Jul 2025</span> Started a remote research internship with the Uhler Lab at MIT.
+            </li>
+        </ul>
+    </section>
+
+    <section id="publications" class="hidden">
+        <h2>Publications</h2>
+        <ul class="publications-list">
+            <li>
+                <span class="publication-title">Deep survival analysis for longitudinal EHR data for joint prediction of hospitalization and death in COPD patients</span>
+                <span class="publication-authors">
+                    E. Manzini, <b>T. González Saito</b>, J. Escudero, A. Génova, C. Caso, T. Pérez-Porcuna, A. Perera-Lluna
+                </span>
+                <span class="publication-venue">
+                    <em>arXiv preprint</em>, 2025.
+                    [<a href="https://arxiv.org/abs/2511.05960" target="_blank">arXiv</a>]
+                </span>
+            </li>
+        </ul>
+    </section>
+
+    <section id="experience" class="hidden">
+        <h2>Research Experience</h2>
+        <div class="job">
+            <p><span class="job-title">Research Intern (visiting student)</span><br>
+            <span class="job-company">Massachusetts Institute of Technology (Uhler Lab)</span><br>
+            <span class="job-date">July 2025 - Present</span></p>
+            <p>Working on Statistical Optimal Transport for genetic data. In person from February 2026</p>
+        </div>
+        <div class="job">
+            <p><span class="job-title">ML Engineering Intern</span><br>
+            <span class="job-company">Esperanto Technologies, Mountain View, USA</span><br>
+            <span class="job-date">July 2024 - September 2024</span></p>
+            <p>Researched and implemented KV Cache compression methods for LLMs, including quantization and eviction-based approaches, to improve inference efficiency.</p>
+        </div>
+        <div class="job">
+            <p><span class="job-title">ML Engineering Intern</span><br>
+            <span class="job-company">Esperanto Technologies, Barcelona, Spain</span><br>
+            <span class="job-date">July 2023 - August 2023</span></p>
+            <p>Implemented diffusion models into the company's software stack, gaining deep algorithmic and theoretical insight into their operation.</p>
+        </div>
+        <div class="job">
+            <p><span class="job-title">Research Intern</span><br>
+            <span class="job-company">Center for Research of Biomedical Engineering (CREB)</span><br>
+            <span class="job-date">July 2022 - August 2022</span></p>
+            <p>Applied Deep Learning for survival analysis, focusing on a clinical use case. Gained familiarity with Transformers, RNNs, and Cox Proportional Hazards Models.</p>
+        </div>
+    </section>
+
+    <section id="education" class="hidden">
+        <h2>Education</h2>
+        <div class="job">
+             <p><span class="job-title">BSc in Data Science and Engineering (GPA: 9.27/10)</span><br>
+             <span class="job-title">BSc in Biomedical Engineering (GPA: 9.32/10)</span><br>
+            <span class="job-company">Universitat Politècnica de Catalunya (UPC) - CFIS Center for Interdisciplinary Studies</span><br>
+            <span class="job-date">2021 - 2026 (Expected)</span></p>
+        </div>
+    </section>
+
+    <section id="projects" class="hidden">
+        <h2>Personal Projects</h2>
+        <ul class="projects-list">
+            <li>
+                <span class="publication-title">HackUPC 2024: Intersystems challenge (3rd place)</span>
+                <p>Developed an LLM RAG application to create video clips from a user's image gallery based on a text prompt, complete with AI-generated background music.
+                [<a href="https://devpost.com/software/muvi-making-photos-alive" target="_blank">Details</a>]
+                </p>
+            </li>
+            <li>
+                <span class="publication-title">Datathon FME 2022: Accenture Challenge</span>
+                <p>Cleaned and processed raw delivery data, then built and fitted logistic regression and transformer-based models to predict supply chain delays.
+                [<a href="https://github.com/oriolmayne/DatathonFME_2022_Accenture" target="_blank">GitHub</a>]
+                </p>
+            </li>
+             <li>
+                <span class="publication-title">Deep Learning in Medical Imaging (High School Thesis)</span>
+                <p>Developed a convolutional neural network to classify chest X-ray images. This work received an Honorific Mention in the UPF Awards to Research Projects.
+                [<a href="https://drive.google.com/file/d/15k86n762WWsVO2rERv4Q_xEFjrpvUndB/view?usp=sharing" target="_blank">Full Report</a>]
+                </p>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="mailto:thomas.gonzalez@estudiantat.upc.edu">Email</a>
+            <a href="https://www.linkedin.com/in/thomas-gonz%C3%A1lez-saito-80134721a" target="_blank">LinkedIn</a>
+            <!-- I recommend creating a Google Scholar profile and adding the link here -->
+            <!-- <a href="[Your Google Scholar Link]" target="_blank">Google Scholar</a> -->
+            <!-- I recommend adding a link to your GitHub profile -->
+            <!-- <a href="[Your GitHub Profile Link]" target="_blank">GitHub</a> -->
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.add('hidden'));
+            const sectionToShow = document.getElementById(sectionId);
+            sectionToShow.classList.remove('hidden');
+        }
+        document.addEventListener('DOMContentLoaded', () => showSection('about'));
+    </script>
+
+</body>
+</html>
